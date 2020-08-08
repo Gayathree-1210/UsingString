@@ -7,6 +7,8 @@ import android.util.Log;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+        private static final String TAG = "MainActivity";
         TextView txtView2;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +19,7 @@ protected void onCreate(Bundle savedInstanceState) {
         txtView2.setText(R.string.Msg2);
 
 
-        Log.i(tag: "Lifecycle", msg: "OneCreate called...");
+        Log.i(TAG,"OnCreate");
 
 
         }
@@ -25,36 +27,36 @@ protected void onCreate(Bundle savedInstanceState) {
         @Override
         protected void onStart() {
                 super.onStart();
-                Log.i(tag: "Lifecycle", msg:"onStart() invoked..");
+                Log.i(TAG,"onStart");
         }
 
         @Override
         protected void onRestart() {
                 super.onRestart();
-                Log.i(tag: "Lifecycle", msg:"onRestart() invoked..");
+                Log.i(TAG,"onRestart");
         }
 
         @Override
         protected void onResume() {
                 super.onResume();
-                Log.i(tag: "Lifecycle", msg:"onResume() invoked..");
+                Log.i(TAG,"onResume");
         }
 
         @Override
         protected void onPause() {
                 super.onPause();
-                Log.i(tag: "Lifecycle", msg:"onPause() invoked..");
+                Log.i(TAG,"onPause");
         }
 
         @Override
         protected void onStop() {
                 super.onStop();
-                Log.i(tag: "Lifecycle", msg:"onStop() invoked..");
+                Log.i(TAG,"onStop");
         }
 
         @Override
         protected void onDestroy() {
                 super.onDestroy();
-                Log.i(tag: "Lifecycle", msg:"onDestroy() invoked..");
+                Log.i(TAG,"onDestroy");
         }
 }
